@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <p>学生数据信息如下：</p>
+    <table>
+        <tr>
+            <td> {{ ids }} </td>
+            <td> {{ na }} </td>
+            <td> {{ ag }} </td>
+            <td> {{ nu }} </td>
+        </tr>
+    </table>
+    
+    <form action="/db_insert" method="POST">
+        <input type="input" name="name" placeholder="a name to insert to students">
+        <input type="input" name="age" placeholder="the student`s age">
+        <input type="input" name="num" placeholder="and number">
+        <!-- <input type="button"> -->
+        <button type="submit">加入</button>
+    </form>
+
+    <form action="/db_del" method="POST">
+        <input type="input" name="id" placeholder="the id">
+        <button type="submit">删除</button>
+    </form>
+
+    <form action="/db_update" method="POST">
+        <input type="input" name="newname" placeholder="new name">
+        <input type="input" name="newage" placeholder="new age">
+        <input type="input" name="newnum" placeholder="new number">
+        <button type="submit">替换掉</button>
+        <input type="input" name="oldname" placeholder="old name">
+    </form>
+
+    <form action="/db_select" method="POST">
+        <input type="input" name="id" placeholder="id for select">
+        <button type="submit">查询</button>
+    </form>
+
+</body>
+
+</html>
